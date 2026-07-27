@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 .vscode
 .cache
 node_modules
+=======
+.vscode
+.cache
+node_modules
+>>>>>>> c2bb96df86c3ee0e089a2b46b022ed29eb85f40f
 public
