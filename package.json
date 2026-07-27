@@ -17,8 +17,8 @@
 		"create-page": "node scripts/create-page.js"
 	},
 	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-LESS.git"
+  		"type": "git",
+  		"url": "git+https://github.com/pauloragosit-dotcom/ajb-heating-plumbing.git"
 	},
 	"keywords": [],
 	"author": "",
@@ -70,9 +70,9 @@
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-LESS/issues"
+  		"url": "https://github.com/pauloragosit-dotcom/ajb-heating-plumbing/issues"
 	},
-	"homepage": "https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-LESS#readme",
+		"homepage": "https://github.com/pauloragosit-dotcom/ajb-heating-plumbing#readme"
 	"dependencies": {
 		"@11ty/eleventy": "^3.1.6",
 		"@codestitchofficial/eleventy-plugin-minify": "^1.1.3",
