@@ -13,12 +13,12 @@
 @media only screen and (min-width: 0px) {
 	/* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
 	:root {
-		--primary: #ff6a3e;
-		--primaryLight: #ffba43;
-		--secondary: #ffba43;
-		--secondaryLight: #ffba43;
-		--headerColor: #1a1a1a;
-		--bodyTextColor: #4e4b66;
+	    --primary: #2e7ec8;
+        --primaryLight: #6badd6;
+        --secondary: #0f2757;
+        --secondaryLight: #1a3a6b;
+        --headerColor: #1a1a1a;
+        --bodyTextColor: #4e4b66;
 		--bodyTextColorWhite: #fafbfc;
 
 		/* Dark Mode Styles */
@@ -26,27 +26,24 @@
 		--medium: #2c394b;
 		--accent: #334756;
 
-		/* 13px - 16px */
-		--topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-		/* 31px - 49px */
-		--headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-		--bodyFontSize: 1rem;
-		/* 60px - 100px top and bottom */
-		--sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
-
-		--headerFont: "Roboto", Arial, sans-serif;
-		--bodyFont: "Roboto", Arial, sans-serif;
+		--headerFont: "Bebas Neue", Impact, sans-serif;
+        --bodyFont: "Montserrat", Arial, sans-serif;
+        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+        --headerFontSize: clamp(2.3rem, 4.9vw, 3.675rem);
+        --bodyFontSize: 1.1rem;
+        --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+        --interiorPadding: clamp(14.375rem, 29vw, 18.75rem);
 	}
 
 	html,
 	body {
+		color: var(--bodyTextColor);
+		font-family: var(--bodyFont);
 		margin: 0;
 		padding: 0;
-		overflow-x: hidden;
-		font-family: var(--bodyFont);
 		font-size: 100%;
 		transition: background-color 0.3s;
-		color: var(--bodyTextColor);
+		overflow-x: hidden;	
 	}
 
 	*,
@@ -72,7 +69,6 @@
 
 	.cs-title {
 		font-size: var(--headerFontSize);
-		font-weight: 900;
 		line-height: 1.2em;
 		text-align: inherit;
 		max-width: 43.75rem;
@@ -187,7 +183,6 @@
 			display: block;
 			background-color: #000;
 			height: 100%;
-
 			//Transition properties
 			width: 0;
 			transition: width 0.3s;
@@ -257,8 +252,9 @@
 	p,
 	li,
 	a {
-		font-size: (16/16rem);
-		line-height: 1.5em;
+		font-size: 1rem;
+        line-height: 1em;
+        margin: 0
 	}
 
 	p,
@@ -295,29 +291,26 @@
 
 /* Fonts */
 @media only screen and (min-width: 0px) {
-	// Grab your fonts to locally host from https://gwfh.mranftl.com/fonts
-	/* roboto-regular - latin */
 	@font-face {
-		font-style: normal;
-		font-family: "Roboto";
-		font-weight: 400;
-		font-display: swap;
-		src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	 font-display: swap;
+        font-family: Bebas Neue;
+        font-style: normal;
+        font-weight: 400;
+        src: url(/assets/fonts/BebasNeue-Regular.ttf) format("woff2")
 	}
 
-	/* roboto-700 - latin */
 	@font-face {
-		font-style: normal;
-		font-family: "Roboto";
-		font-weight: 700;
 		font-display: swap;
-		src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 400;
+        src: url(/assets/fonts/Montserrat-VariableFont_wght.ttf) format("woff2")
 	}
 
 	/* roboto-900 - latin */
 	@font-face {
 		font-style: normal;
-		font-family: "Roboto";
+		font-family: "Montserrat";
 		font-weight: 900;
 		font-display: swap;
 		src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -391,6 +384,7 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 1024px) {
 	#dark-mode-toggle {
+
 		margin: 0;
 		position: relative;
 		top: auto;
@@ -400,6 +394,35 @@
 		&:hover {
 			cursor: pointer;
 		}
+		
+		 #hero-1203 {
+        &:before {
+            height: calc(258 / 16 * 1rem);
+        }
+        .cs-picture {
+            width: 70%;
+            max-width: calc(866 / 16 * 1rem);
+        }
+
+        .cs-floater {
+            width: calc(1465 / 16 * 1rem);
+            top: 30%;
+        }
+        .cs-topper {
+                color: var(--primaryLight);
+            }
+            .cs-title {
+                color: var(--bodyTextColorWhite);
+            }
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+                opacity: 0.9;
+            }
+
+                    }
+
+		
+		
 	}
 }
 
@@ -419,7 +442,6 @@
 		width: 100%;
 		/* prevents padding and border from affecting height and width */
 		box-sizing: border-box;
-		padding: (12/16rem) (16/16rem);
 		background-color: #fff;
 		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 		position: fixed;
@@ -460,12 +482,8 @@
 			}
 		}
 
-		.cs-container {
-			width: 100%;
-			display: flex;
-			justify-content: flex-end;
-			align-items: center;
-		}
+
+		
 
 		.cs-logo {
 			width: 40%;
@@ -693,6 +711,7 @@
 			.cs-li-link {
 				color: var(--bodyTextColorWhite);
 			}
+			
 		}
 	}
 }
@@ -956,6 +975,40 @@
 				/* turns it white */
 				filter: grayscale(1) brightness(1000%);
 			}
+			  .cs-title {
+                color: var(--bodyTextColorWhite);
+            }
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+                opacity: 0.9;
+            }
+
+			 #hero-1203 {
+        &:before {
+            height: calc(258 / 16 * 1rem);
+        }
+        .cs-picture {
+            width: 70%;
+            max-width: calc(866 / 16 * 1rem);
+        }
+
+        .cs-floater {
+            width: calc(1465 / 16 * 1rem);
+            top: 30%;
+        }
+        .cs-topper {
+                color: var(--primaryLight);
+            }
+            .cs-title {
+                color: var(--bodyTextColorWhite);
+            }
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+                opacity: 0.9;
+            }
+
+                    }
+
 		}
 	}
 }
@@ -985,6 +1038,8 @@
 			align-items: center;
 			gap: (24/16rem);
 		}
+		
+		
 
 		.cs-toggle {
 			display: none;
@@ -1086,6 +1141,14 @@
 					background-color: var(--primaryLight);
 				}
 			}
+			  .cs-title {
+                color: var(--bodyTextColorWhite);
+            }
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+                opacity: 0.9;
+            }
+			
 		}
 	}
 }
@@ -1113,6 +1176,9 @@
 			align-items: center;
 			flex-direction: column;
 		}
+		
+
+
 
 		.cs-int-title {
 			/* 39px - 49px */
@@ -1223,6 +1289,8 @@
 			/* 48px - 64px */
 			gap: clamp(3rem, 6vw, 4rem);
 		}
+
+
 
 		.cs-content {
 			/* set text align to left if content needs to be left aligned */
@@ -1472,6 +1540,7 @@
 			max-width: (1280/16rem);
 			row-gap: 0;
 		}
+
 
 		.cs-contact {
 			flex-direction: row;

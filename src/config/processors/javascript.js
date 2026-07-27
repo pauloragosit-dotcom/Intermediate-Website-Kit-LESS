@@ -14,4 +14,6 @@ module.exports = async function () {
         sourcemap: !isProduction,
         target: isProduction ? "es6" : "esnext",
     });
+
+    
 };

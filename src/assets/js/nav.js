@@ -235,6 +235,17 @@
 			document.addEventListener("keydown", (e) => e.key === "Escape" && keyboardManager.handleEscape());
 			document.addEventListener("focusin", eventManager.handleMobileFocus);
 
+			// Add "scroll" class to body after scrolling 100px
+			document.addEventListener("scroll", () => {
+				if (
+					document.documentElement.scrollTop >= 100
+				) {
+					elements.body.classList.add("scroll");
+				} else {
+					elements.body.classList.remove("scroll");
+				}
+			});
+			
 			// Resize handling
 			window.addEventListener("resize", () => {
 				this.inertState();
@@ -249,3 +260,5 @@
 	init.inertState();
 	init.eventListeners();
 })();
+
+

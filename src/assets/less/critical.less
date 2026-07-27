@@ -11,135 +11,96 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #hero-143 {
-        /* Centers button */
-        text-align: center;
-        /* 144px - 300px - leaving extra space for the navigation */
-        padding: clamp(9rem, 25.95vw, 18.75rem) (16/16rem) 0;
-        /* 130px - 450px */
-        padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
+    #hero-1203 {
+        overflow:hidden;
+        padding: clamp(14rem,43.95vw,21.875rem) 1rem 0;
         position: relative;
-        z-index: 1;
-        /* Prevents white rectangle pseudos from overlapping the sections below */
-        overflow: hidden;
+        z-index: 1
+    }
 
-        &:before {
-            /* Left side of the triangle */
-            content: "";
-            width: (500/16rem);
-            /* make really long so it covers the whole screen all the way to desktop */
-            height: (4000/16rem);
-            background: #fff;
-            opacity: 1;
-            transform: rotate(-67deg);
-            transform-origin: center;
-            position: absolute;
-            display: block;
-            bottom: (-2235/16rem);
-            /* this makes the right edge sit at the 50% line at all times */
-            right: 50%;
-            z-index: 0;
-        }
+    #hero-1203:before {
+        background: #f7f7f7;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: clamp(6.25rem,29vw,12.5rem);
+        left: 0;
+        opacity: 1;
+        position: absolute;
+        width: 100%
+    }
 
-        &:after {
-            /* Right side of the triangle */
-            content: "";
-            width: (500/16rem);
-            height: (4000/16rem);
-            background: #fff;
-            opacity: 1;
-            transform: rotate(67deg);
-            transform-origin: center;
-            position: absolute;
-            display: block;
-            bottom: (-2235/16rem);
-            /* this makes the left edge sit at the 50% line at all times */
-            left: 50%;
-            z-index: 0;
-        }
+    #hero-1203 .cs-container {
+        gap: clamp(3rem,11vw,6rem);
+        justify-content: center;
+        margin: auto;
+        max-width: 80rem;
+        position: relative
+    }
 
-        .cs-background {
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -2;
+    #hero-1203 .cs-container,#hero-1203 .cs-content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
 
-            &:before {
-                /* Overlay */
-                content: "";
-                width: 100%;
-                height: 100%;
-                background: #000;
-                opacity: 0.7;
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                z-index: 1;
-                /* prevents the cursor from interacting with it */
-                pointer-events: none;
-            }
+    #hero-1203 .cs-content {
+        max-width: 39.375rem;
+        text-align: center
+    }
 
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
+    #hero-1203 .cs-title {
+        color: var(--headerColor);
+        font-size: clamp(3.4375rem,9.4vw,5rem);
+        margin: 0 0 1rem;
+        max-width: 22ch;
+        position: relative;
+        width: 100%
+    }
 
-        .cs-container {
-            width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
-        }
+    #hero-1203 .cs-text {
+        color: var(--bodyTextColor);
+        font-size: clamp(1rem,2vw,1.25rem);
+        line-height: 1.5em;
+        margin: 0 0 clamp(1.75rem,4vw,2.5rem);
+        max-width: 39.375rem;
+        width: 100%
+    }
 
-        .cs-title {
-            /* 39px - 61px */
-            font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
-            font-weight: 700;
-            line-height: 1.2em;
-            text-align: center;
-            max-width: (829/16rem);
-            /* 16px - 24px */
-            margin: 0 auto clamp(1rem, 4vw, 1.5rem);
-            color: #fff;
-            position: relative;
+    #hero-1203 .cs-button-box {
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 18rem
+    }
 
-            &:after {
-                /* Divider Line */
-                content: "";
-                /* 60px - 100px */
-                width: clamp(3.75rem, 9.5vw, 6.25rem);
-                /* 4px - 8px */
-                height: clamp(0.25rem, 0.8vw, 0.5rem);
-                /* 16px - 24px */
-                margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
-                background: var(--primary);
-                opacity: 1;
-                position: relative;
-                display: block;
-            }
-        }
+    #hero-1203 .cs-button-solid {
+        justify-content: space-between
+    }
 
-        .cs-text {
-            /* 16px - 25px */
-            font-size: clamp(1rem, 1.95vw, 1.5625rem);
-            line-height: 1.5em;
-            text-align: center;
-            width: 100%;
-            /* 464px - 800px */
-            max-width: clamp(29rem, 60vw, 50rem);
-            margin: 0 auto;
-            /* 40px - 48px */
-            margin-bottom: clamp(2.5rem, 4vw, 3rem);
-            color: #fff;
-        }
+    #hero-1203 .cs-button-transparent {
+        text-align: center
+    }
+
+    #hero-1203 .cs-picture {
+        align-items: flex-end;
+        display: flex;
+        height: auto;
+        max-width: 54.125rem;
+        position: relative;
+        width: 95%
+    }
+
+    #hero-1203 .cs-picture img {
+        display: block;
+        height: auto;
+        width: 100%
+    }
+
+    #hero-1203 .paint-splash {
+        display: none
     }
 }
 
