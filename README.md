@@ -1003,7 +1003,7 @@ logo_url: https://decapbridge.com/decapcms-with-bridge.svg
 # Add site links in DecapCMS (optional)
 site_url: https://testing-decapbridge.netlify.app
 ```
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1514bd7a-d031-42f6-9330-da3022fd40b3/deploy-status)](https://app.netlify.com/projects/ajb-plumbing/deploys)
 2. Push changes to the repo and test the authentication system. As the admin of the site, your login credentials to access the Decap dashboard are the same as your decapbridge.com credentials.
 3. Invite your client from your decapbridge dashboard. This will create a decapbridge collaborator account for them. From there, they will be able to access their Decap dashboard, reset their password etc.
 >>>>>>> c2bb96df86c3ee0e089a2b46b022ed29eb85f40f
