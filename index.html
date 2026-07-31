@@ -1,0 +1,454 @@
+---
+title: "Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO"
+description: "Meta description for the page"
+permalink: "/"
+tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Critical styles are loaded first -->
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
+    <script defer="" src="/assets/js/nav.js"></script>
+    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+    {% if client.isProduction %}
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css"/>
+    {% endif %}
+
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+    <!-- {% include "components/home-schema.html" %} -->
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1203">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Fully Insured · Est. 2022</span>
+            <h1 class="cs-title">Trusted & Reliable Local Plumber in Bolton</h1>
+            <p class="cs-text">
+               Bathrooms, Boilers, Radiators & General Maintenance — High Standards, Competitive Rates.
+               
+            </p>
+            <div class="cs-button-box"><a href="" class="cs-button-solid">Get A Free Quote</a><a href="" class="cs-button-solid1">Our Services</a></div>
+                        
+        </div>
+        <!--To make your own background crops of people use https://www.remove.bg/-->
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="/assets/images/hero.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/hero.webp">
+            <img aria-hidden="true" decoding="async" src="/assets/images/hero.webp" alt="bathroom" width="960" height="979">
+        </picture>
+    </div>
+</section>
+                                
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1628">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Proudly Serving Bolton</span>
+                <h2 class="cs-title">About Your Local Plumber in Bolton</h2>
+            </div>
+            <p class="cs-text">
+              At AJB Plumbing & Heating, we provide expert plumbing, boiler, radiator and bathroom services for homeowners across Bolton, Farnworth, Horwich, Westhoughton and nearby areas. Whether you’re planning a new bathroom, need a boiler installation, or want ongoing maintenance, we deliver reliable workmanship at competitive rates.
+            </p>
+        </div>                  
+        <ul class="cs-card-group">
+                        <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Process Safety & Risk Management</h3>
+                    <p class="cs-item-text">
+                        We provide some of the finest quality, most reliable, and cost effective services and solutions.
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Occupational Safety & Health</h3>
+                    <p class="cs-item-text">
+                        We provide some of the finest quality, most reliable, and cost effective services and solutions.
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Security Assessment and Planning</h3>
+                    <p class="cs-item-text">
+                        We provide some of the finest quality, most reliable, and cost effective services and solutions.
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Security Assessment and Planning</h3>
+                    <p class="cs-item-text">
+                        We provide some of the finest quality, most reliable, and cost effective services and solutions.
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/nuclear.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Process Safety & Risk Management</h3>
+                    <p class="cs-item-text">
+                        We provide some of the finest quality, most reliable, and cost effective services and solutions.
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/worker5.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Occupational Safety & Health</h3>
+                    <p class="cs-item-text">
+                        We provide some of the finest quality, most reliable, and cost effective services and solutions.
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Security Assessment and Planning</h3>
+                    <p class="cs-item-text">
+                        We provide some of the finest quality, most reliable, and cost effective services and solutions.
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/containers.jpg" alt="room" width="413" height="420">
+                    </picture>
+                    <h3 class="cs-h3">Security Assessment and Planning</h3>
+                    <p class="cs-item-text">
+                        We provide some of the finest quality, most reliable, and cost effective services and solutions.
+                    </p>
+                    <span class="cs-fake-link">
+                        Get Started
+                        <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gold-chevron-right.svg" alt="" width="20" height="20" loading="lazy" decoding="async" aria-hidden="true">
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+                                
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+ <section id="sbs-1640">
+    <div class="cs-container">
+        <div class="cs-content">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/Images/bath-service.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/Images/bath-service.jpg">
+                <img loading="lazy" decoding="async" src="/assets/Images/bath-service.jpg" alt="bathroom" width="614" height="750">
+            </picture>
+        </div>
+        <div class="cs-stats-group">
+              <span class="cs-topper">Our Courses</span>
+            <h2 class="cs-title">Stitch Group for Process Safety Training</h2>
+            <p class="cs-text">
+                Aqestic recusandae laudantium optio amet a quisquam saepe aliquid, voluptate praesentium dicta fuga dolor error perspiciatis voluptatem eum cupiditate totam reiciendis quam minus inventore sint rem impedit esse quasi Tenetur sed reprehenderit earum a magni aliquid blanditiis dolores, veritatis soluta autem beatae officia expedita ipsum rerum doloribus sit provident delectus perspiciatis voluptatem eum cupiditate.
+            </p>
+            <p class="cs-text">
+                Aqestic recusandae laudantium optio amet a quisquam saepe aliquid, voluptate praesentium dicta fuga dolor error perspiciatis voluptatem eum cupiditate totam reiciendis quam minus inventore sint rem impedit esse quasi Tenetur sed reprehenderit earum a magni aliquid blanditiis dolores, veritatis soluta autem beatae officia expedita ipsum rerum doloribus sit provident delectus perspiciatis voluptatem eum cupiditate.
+            </p>
+            <ul class="cs-stats">
+                <li class="cs-stat">
+                    <span class="cs-number">475</span>
+                    <span class="cs-desc">Repeat Customers</span>
+                </li>
+                <li class="cs-stat">
+                    <span class="cs-number">2K</span>
+                    <span class="cs-desc">Satisfied Customers</span>
+                </li>
+                <li class="cs-stat">
+                    <span class="cs-number">37</span>
+                    <span class="cs-desc">Professional Team</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Why Choose Us                -->
+<!-- ============================================ -->
+
+<section id="why-choose-1824">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym5.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym5.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym5.jpg" alt="body builder" width="562" height="568">
+            </picture>
+            <picture class="cs-floater">
+                <img class="cs-floater-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/weights.svg" alt="icon" width="59" height="48">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Why Choose Us</span>
+            <h2 class="cs-title">Amazing Features Of Stitch Gym</h2>
+        </div>
+        <div class="cs-flex">
+            <div class="cs-box">
+                <div class="cs-box-content" data-box="one">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-house.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">Our Mission & Approach</h3>
+                    <p class="cs-box-text">
+                        Take advantage of our spacious gym equipped with a wide range of gym fitness machines so you can achieve the maximum benefits.
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="two">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-house.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">State of The Art Equipment</h3>
+                    <p class="cs-box-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea distinctio ab officiis vel tenetur dolorem facilis odit cum molestias aperiam!
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="three">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-house.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">Education & Top Trainers</h3>
+                    <p class="cs-box-text">
+                        Molestiae illo odit eum iure quas error autem quibusdam in natus iste tenetur molestias expedita pariatur, modi qui.
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="four">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/red-house.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">Series Results Based 
+                        on Training</h3>
+                    <p class="cs-box-text">
+                        Dicta cupiditate facilis ipsam impedit voluptatibus possimus iure ut distinctio, quo nisi. Adipisci, quos officiis asperiores quaerat delectus deserunt.
+                    </p>
+                </div>
+            </div>
+            <div class="cs-button-group">
+                <button class="cs-button cs-active" data-filter="one">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/house-1a.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">Our Mission & Approach</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+                <button class="cs-button" data-filter="two">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/hourglass-1a.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">State of The Art Equipment</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+                <button class="cs-button" data-filter="three">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/book-1a.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">Education & Top Trainers</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+                <button class="cs-button" data-filter="one">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/invoice-1a.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">Series Results Based on Training</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-355">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Trusted by Thousand of People & Companies</h2>
+            <p class="cs-text">
+                At Stitch Cleaning Service, let us help you solve problems so that you can focus on your mission. We support businesses through periods of expansion, succession.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote-blue.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="cs-review">
+                    I have used CleanPro service for about four years. I describe myself very picky and difficult to be pleased. Exceeded my expectations. 
+                </p>
+                <span class="cs-name">John Doe</span>
+                <span class="cs-job">Chief Executive</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote-blue.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="cs-review">
+                    I have used CleanPro service for about four years. I describe myself very picky and difficult to be pleased. Exceeded my expectations.
+                </p>
+                <span class="cs-name">Robert Henrich</span>
+                <span class="cs-job">CEO, HK Traders</span>
+            </li>
+            <li class="cs-item">
+                <img class="cs-quote" aria-hidden="true" src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/quote-blue.svg" decoding="async" alt="quote icon" width="40" height="33">
+                <p class="cs-review">
+                    I have used CleanPro service for about four years. I describe myself very picky and difficult to be pleased. Exceeded my expectations.
+                </p>
+                <span class="cs-name">Robert Henrich</span>
+                <span class="cs-job">CEO, HK Traders</span>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+    <!-- ============================================ -->
+    <!--                   Script                    -->
+    <!-- ============================================ -->
+
+<script>
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('#why-choose-1824 .cs-button');
+    const boxContents = document.querySelectorAll('#why-choose-1824 .cs-box-content');
+
+    // Function to show the corresponding box content and hide others
+    function showBoxContent(button) {
+        const filterValue = button.getAttribute('data-filter');
+
+        boxContents.forEach(box => {
+            if (box.getAttribute('data-box') === filterValue) {
+                box.classList.remove('cs-hidden');
+            } else {
+                box.classList.add('cs-hidden');
+            }
+        });
+
+        buttons.forEach(btn => {
+            if (btn === button) {
+                btn.classList.add('cs-active');
+            } else {
+                btn.classList.remove('cs-active');
+            }
+        });
+    }
+
+    // Event listeners for screens below 1024px
+    if (window.matchMedia('(max-width: 1024px)').matches) {
+        buttons.forEach(button => {
+            button.addEventListener('click', () => showBoxContent(button));
+        });
+    }
+
+    // Event listeners for screens above 1024px
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => showBoxContent(button));
+        });
+    }
+});
+                                
+</script>
+{% include 'sections/cta.html' %}
+{% endblock %}
